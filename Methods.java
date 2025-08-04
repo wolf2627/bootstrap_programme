@@ -2,33 +2,54 @@ import java.util.Scanner;
 
 class Methods{
 
-    // With Argument and with Return Type
+    // Type: With Argument and with Return
     // Example: Addition
 
-    public static int add(int a, int b){
-        System.out.println("I am add Method, I started... performing addition a = "+ a + " b = " + b);
+    public static int add(int a, int b)
+    {
+        System.out.println("add method is invoked with a: "+ a + " b: " + b);
         int result = a+b;
         return result;
-    }    
+    }
 
-    // With Argument and with Return Type
-    // Example : Subtraction
+    // Type: Without Argument and Without Return
+    // Example: Greet
 
-    public static void sub(int a, int b){
-        System.out.println("I am sub Method, I started... performing subtration a = "+ a + " b = " + b);
-        int result = a - b;
-        System.out.println(result);
+    public static void greet(){
+        System.out.println("Vanakkam |^|");
     }
 
 
+    // Type: With Argument and Without Return
+    // Example: Subtration
+
+    public static void sub(       ){
+
+    }
+
+    // Type: Without Argument and With Return
+    // Example: sendOff
+    public static ______ sendOff() {
+
+    }
+    
+
     public static void main(String[] args){
+        System.out.println("Main method started..");
+
         Scanner in = new Scanner(System.in);
-        System.out.println("I am Main Method, I started...");
 
-        // int summation = add(10, 6);
-        System.out.println(add(10, 6));
+        greet();
 
-        sub(10, 6);
+        int a = in.nextInt();
+        int b = in.nextInt();
 
+        
+        // int summation = add(10, 70);
+        // System.out.println(summation);
+
+        System.out.println(add(b, a)); //add(3, 5)
+
+        System.out.println("Main method ended..");
     }
 }
