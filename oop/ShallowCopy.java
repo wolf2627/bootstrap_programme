@@ -7,13 +7,22 @@ class Address {
 }
 
 
-class Student{
+class Name{
     String name;
+
+    Name(String name){
+        this.name = name;
+    }
+}
+
+
+class Student{
+    Name name;
     int age;
     Address address;
 
     // Normal Constructor (parameterized)
-    Student(String name, int age, Address address){
+    Student(Name name, int age, Address address){
         this.name = name;
         this.age = age;
         this.address = address;
@@ -27,7 +36,7 @@ class Student{
     }
 
     void display(){
-        System.out.println("Name: " + name + " Age: " + age + " Address: " + address.city);
+        System.out.println("Name: " + name.name + " Age: " + age + " Address: " + address.city);
     }
 
 }
@@ -39,15 +48,15 @@ class ShallowCopy{
 
         // Student st1 = new Student("Murugan", 20, addr);
 
-        Student st1 = new Student("Murugran" , 20, new Address("Madurai"));
+        Student st1 = new Student(new Name("Murugan") , 20, new Address("Madurai"));
         st1.display();
 
-        // shallow copy
+        // copy
         Student nst = new Student(st1);
 
         nst.display();
 
-        nst.name = "siva";
+        nst.name.name = "siva";
         nst.address.city = "Dindigul";
 
         nst.display();
